@@ -274,6 +274,13 @@ namespace StructureMap.Testing.Graph
         }
 
         [Test]
+        public void TryGetInstanceViaName_ReturnsNull_WhenConcreteObjectNotFound()
+        {
+            object rule = _container.TryGetInstance(typeof (ConcreteRule), "NotAnInstanceKey");
+            rule.ShouldBeNull();
+        } 
+
+        [Test]
         public void TryGetInstanceViaName_ReturnsTheOutInstance_WhenFound()
         {
             addColorInstance("Red");

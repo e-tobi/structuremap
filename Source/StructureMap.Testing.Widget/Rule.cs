@@ -124,4 +124,8 @@ namespace StructureMap.Testing.Widget
 
         public int Value { get { return _Value; } }
     }
+
+    public class ConcreteRule: Rule
+    {
+    } 
 }
